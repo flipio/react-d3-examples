@@ -13,7 +13,7 @@ class App extends PureComponent {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>React <span role={'img'}>❤</span>️ D3</h1>
+          <h1>React D3 Playground</h1>
         </header>
         <div className="charts-container">
           <BarChart
