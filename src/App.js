@@ -1,25 +1,70 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {PureComponent} from 'react';
 import './App.css';
 
-class App extends Component {
+import {Colors, barChartData} from "./Constants";
+import {generateLineData} from './Util';
+
+import {BarChart} from './components/BarChart';
+import {LineChart} from './components/LineChart';
+import {PieChart} from './components/PieChart';
+
+class App extends PureComponent {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h1>React <span role={'img'}>❤</span>️ D3</h1>
         </header>
+        <div className="charts-container">
+          <BarChart
+            width={400}
+            height={500}
+            data={barChartData}
+          />
+          <LineChart
+            width={400}
+            height={500}
+            multi
+            data={
+              [
+                generateLineData(),
+                generateLineData(),
+                generateLineData()
+              ]
+            }
+          />
+          <LineChart
+            width={400}
+            height={500}
+            showDataPoints
+            multi
+            data={
+              [
+                generateLineData(),
+                generateLineData()
+              ]
+            }
+          />
+          <LineChart
+            width={400}
+            height={500}
+            showDataPoints
+            multi
+            curve
+            data={
+              [
+                generateLineData()
+              ]
+            }
+          />
+          <PieChart
+            width={200}
+            height={200}
+            data={[20, 10, 50, 70, 30]}
+            colors={Colors.path}
+            arcWidth={30}
+          />
+        </div>
       </div>
     );
   }
