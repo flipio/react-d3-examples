@@ -56,7 +56,8 @@ export class BarChart extends PureComponent {
 
     yScale
       .range([height - margins.bottom, margins.top])
-      .domain([0, tempMax]);
+      .domain([0, tempMax])
+      .nice();
 
     // calculate x and y for each rectangle
     const bars = data.map(d => {
