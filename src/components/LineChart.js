@@ -40,11 +40,13 @@ export class LineChart extends PureComponent {
 
     xScale
       .range([0, width - margins.right - margins.left])
-      .domain([xExtent[0] * xOffset, xExtent[1] * yOffset]);
+      .domain([xExtent[0] * xOffset, xExtent[1] * yOffset])
+      .nice();
 
     yScale
       .range([height - margins.bottom - margins.top, 0])
-      .domain([yExtent[0] * xOffset, yExtent[1] * yOffset]);
+      .domain([yExtent[0] * xOffset, yExtent[1] * yOffset])
+      .nice();
 
     lineGenerator.x(d => {
       return xScale(d.x);

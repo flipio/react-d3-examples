@@ -69,7 +69,7 @@ export class Axis extends PureComponent {
     const {x, y} = this.props;
 
     return (
-      <g ref={this.axisRef} transform={`translate(${x}, ${y})`}/>
+      <g className={'axis'} ref={this.axisRef} transform={`translate(${x}, ${y})`}/>
     );
   }
 }
