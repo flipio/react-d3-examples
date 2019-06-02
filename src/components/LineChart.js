@@ -1,10 +1,10 @@
-import React, {PureComponent, Fragment} from 'react';
-import {flatten} from 'lodash';
-import {scaleLinear} from 'd3-scale';
-import {line, curveMonotoneX} from 'd3-shape';
-import {extent} from 'd3-array';
-import {Axis, AxisOrientation} from './Axis';
-import {Colors} from '../Constants';
+import React, { PureComponent, Fragment } from 'react';
+import { flatten } from 'lodash';
+import { scaleLinear } from 'd3-scale';
+import { line, curveMonotoneX } from 'd3-shape';
+import { extent } from 'd3-array';
+import { Axis, AxisOrientation } from './Axis';
+import { Colors } from '../Constants';
 
 const margins = {
   left: 60,

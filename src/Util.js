@@ -1,4 +1,4 @@
-import {times} from "lodash";
+import { times, forEach } from "lodash";
 
 export function rand(min, max) {
   const randomNumber = Math.random() * (max - min) + min;
@@ -31,4 +31,23 @@ export function generateLineData() {
   });
 
   return data;
+}
+
+export const STACKED_BAR_KEYS = ['apples', 'oranges', 'trees'];
+export function generateStackData() {
+ const data = [];
+
+ times(10, (index) => {
+   const stack = {
+     index,
+   };
+
+   forEach(STACKED_BAR_KEYS, (key) => {
+     stack[key] = rand(0, 100);
+   });
+
+   data.push(stack);
+ });
+
+ return data;
 }

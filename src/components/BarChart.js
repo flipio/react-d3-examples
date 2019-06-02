@@ -1,9 +1,9 @@
-import React, {PureComponent} from 'react';
-import {scaleLinear, scaleBand} from 'd3-scale';
-import {max} from 'd3-array';
-import {Axis, AxisOrientation} from './Axis';
-import {timeFormat} from 'd3-time-format';
-import {Colors} from '../Constants';
+import React, { PureComponent } from 'react';
+import { scaleLinear, scaleBand } from 'd3-scale';
+import { max } from 'd3-array';
+import { Axis, AxisOrientation } from './Axis';
+import { timeFormat } from 'd3-time-format';
+import { Colors } from '../Constants';
 
 const margins = {
   top: 60,
