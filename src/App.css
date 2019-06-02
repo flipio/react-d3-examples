@@ -27,3 +27,17 @@
   flex-direction: row;
   align-items: center;
 }
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #9E9E9E;
+}
+
+.axis .tick text {
+  fill: #9E9E9E;
+}

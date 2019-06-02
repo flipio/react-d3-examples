@@ -1,6 +1,6 @@
-import React, {PureComponent, createRef} from 'react';
-import {select} from 'd3-selection';
-import {axisLeft, axisBottom, axisRight, axisTop} from 'd3-axis';
+import React, { PureComponent, createRef } from 'react';
+import { select } from 'd3-selection';
+import { axisLeft, axisBottom, axisRight, axisTop } from 'd3-axis';
 
 export const AxisOrientation = {
   TOP: 'TOP',
@@ -69,7 +69,7 @@ export class Axis extends PureComponent {
     const {x, y} = this.props;
 
     return (
-      <g ref={this.axisRef} transform={`translate(${x}, ${y})`}/>
+      <g className={'axis'} ref={this.axisRef} transform={`translate(${x}, ${y})`}/>
     );
   }
 }
