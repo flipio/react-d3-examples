@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "http://flipio.github.io/react-d3-examples",
   "dependencies": {
-    "d3": "^5.8.2",
-    "d3-scale-chromatic": "^1.3.3",
+    "d3": "^7.6.1",
+    "d3-scale-chromatic": "^3.0.0",
     "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",
     "react": "^16.8.1",
